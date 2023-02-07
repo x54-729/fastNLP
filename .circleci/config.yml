@@ -183,4 +183,4 @@ workflows:
           python: "3.9.0"
       - build_jittor_cpu:
           name: Test CPU - Jittor
-          python: "3.9.0"
+          # python: "3.9.0"
