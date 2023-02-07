@@ -83,12 +83,12 @@ jobs:
           command: |
             pip install --upgrade pip
             pip install -r requirements.txt
-            pip install pytest coverage
+            pip install pytest coverage nltk
       - run:
           name: Install PaddlePaddle
           command: |
             python -V
-            pip install paddlepaddle==2.4.0
+            pip install paddlepaddle==2.4.1
             pip install paddlenlp
       - run:
           name: Run unittests
@@ -115,7 +115,7 @@ jobs:
           command: |
             pip install --upgrade pip
             pip install -r requirements.txt
-            pip install pytest coverage
+            pip install pytest coverage nltk
       - run:
           name: Install Oneflow
           command: |
@@ -146,7 +146,7 @@ jobs:
           command: |
             pip install --upgrade pip
             pip install -r requirements.txt
-            pip install pytest coverage requests
+            pip install pytest coverage requests nltk datasets
       - run:
           name: Install Jittor
           command: |
