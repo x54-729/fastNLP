@@ -132,7 +132,7 @@ def test_trainer_torch_with_evaluator(
     driver,
     device,
     evaluate_every,
-    n_epochs=4,
+    n_epochs=10,
 ):
     skip_no_cuda(device)
     callbacks = [
