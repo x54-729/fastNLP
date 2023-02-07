@@ -15,7 +15,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: medium
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -43,7 +43,7 @@ jobs:
         type: string
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: medium
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -75,7 +75,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: medium
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -107,7 +107,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: medium
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -138,7 +138,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: medium
+    resource_class: large
     steps:
       - checkout
       - run:
@@ -156,7 +156,7 @@ jobs:
           name: Run unittests
           command: |
             cd tests/
-            coverage run -m pytest . -m jittor -s
+            coverage run -m pytest . -m jittor
             coverage xml -i
             coverage report -m -i
 
