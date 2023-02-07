@@ -51,7 +51,7 @@ jobs:
           command: |
             pip install --upgrade pip
             pip install -r requirements.txt
-            pip install pytest coverage scikit-learn 
+            pip install pytest coverage scikit-learn nltk
       - run:
           name: Install PyTorch
           command: |
@@ -146,7 +146,7 @@ jobs:
           command: |
             pip install --upgrade pip
             pip install -r requirements.txt
-            pip install pytest coverage
+            pip install pytest coverage requests
       - run:
           name: Install Jittor
           command: |
@@ -156,7 +156,7 @@ jobs:
           name: Run unittests
           command: |
             cd tests/
-            coverage run -m pytest . -m jittor --co
+            coverage run -m pytest . -m jittor
             coverage xml -i
             coverage report -m -i
 
@@ -177,7 +177,6 @@ workflows:
           torch: "1.12.0"
       - build_paddle_cpu:
           name: Test CPU - PaddlePaddle
-          python: "3.9.0"
       - build_oneflow_cpu:
           name: Test CPU - Oneflow
           python: "3.9.0"

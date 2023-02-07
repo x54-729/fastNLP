@@ -33,6 +33,16 @@ def test_get_single_device(driver, device):
     driver = initialize_oneflow_driver(driver, device, model)
     assert isinstance(driver, OneflowSingleDriver)
 
+@pytest.mark.oneflow
+@pytest.mark.parametrize('driver', ['oneflow'])
+def test_get_single_device(driver):
+    """测试正常情况下初始化OneflowSingleDriver的情况."""
+    for device in ['cpu', 'cuda:0', 0, oneflowdevice('cuda:0')]: 
+        skip_no_cuda(device)
+        model = OneflowNormalModel_Classification_1(20, 10)
+        driver = initialize_oneflow_driver(driver, device, model)
+        assert isinstance(driver, OneflowSingleDriver)
+
 
 @pytest.mark.oneflow
 @pytest.mark.parametrize('device', [[0, 1], -1])
