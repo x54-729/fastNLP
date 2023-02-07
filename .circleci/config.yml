@@ -15,7 +15,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run:
@@ -43,7 +43,7 @@ jobs:
         type: string
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run:
@@ -75,7 +75,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run:
@@ -107,7 +107,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run:
@@ -138,7 +138,7 @@ jobs:
         default: "3.7.4"
     docker:
       - image: cimg/python:<< parameters.python >>
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run:
