@@ -67,7 +67,7 @@ def model_and_optimizers(request):
             feature_dimension=NormalClassificationTrainTorchConfig.
             feature_dimension)
         trainer_params.optimizers = SGD(
-            trainer_params.model.parameters(), lr=0.001)
+            trainer_params.model.parameters(), lr=0.0001)
         dataset = TorchNormalDataset_Classification(
             num_labels=NormalClassificationTrainTorchConfig.num_labels,
             feature_dimension=NormalClassificationTrainTorchConfig.
@@ -96,7 +96,7 @@ def model_and_optimizers(request):
             num_labels=ArgMaxDatasetConfig.num_labels,
             feature_dimension=ArgMaxDatasetConfig.feature_dimension)
         trainer_params.optimizers = SGD(
-            trainer_params.model.parameters(), lr=0.001)
+            trainer_params.model.parameters(), lr=0.0001)
         dataset = TorchArgMaxDataset(
             feature_dimension=ArgMaxDatasetConfig.feature_dimension,
             data_num=ArgMaxDatasetConfig.data_num,
