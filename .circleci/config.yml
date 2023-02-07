@@ -156,7 +156,7 @@ jobs:
           name: Run unittests
           command: |
             cd tests/
-            coverage run -m pytest . -m jittor
+            coverage run -m pytest . -m jittor -s
             coverage xml -i
             coverage report -m -i
 

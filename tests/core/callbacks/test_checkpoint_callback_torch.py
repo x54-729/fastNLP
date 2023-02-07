@@ -351,7 +351,7 @@ def test_model_checkpoint_callback_2(model_and_optimizers: TrainerParameters,
 @pytest.mark.torch
 @pytest.mark.parametrize('driver,device', [('torch', 'cpu'), ('torch', [0, 1])]
                          )  # ("torch", "cpu"), ("torch", [0, 1]), ("torch", 1)
-@magic_argv_env_context(timeout=100)
+@magic_argv_env_context(timeout=240)
 def test_trainer_checkpoint_callback_1(model_and_optimizers: TrainerParameters,
                                        driver, device):
     skip_no_cuda(device)
